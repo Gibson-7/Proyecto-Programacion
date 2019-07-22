@@ -1,0 +1,47 @@
+.biniciar{
+    width: 25%;
+    height: 12%;
+    margin-top: 23%;
+    background-color: #F81865;
+    color: white;
+}
+
+.bregistrar{
+    width: 25%;
+    height: 12%;
+    background-color: #F81865;
+    color: white;
+}
+
+.header{
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    background-color: #2B2B2B;
+    left: 0;
+}
+
+.inireg{
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #2B2B2B;
+    position: fixed;
+    bottom: 8%;
+    text-align: center;
+    justify-content: center;
+    line-height: 5em;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    height: 8%;
+    background-color: #999999;
+    color: white;
+    text-align: center;
+}
+
+
