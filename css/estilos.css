@@ -2,14 +2,20 @@
     width: 25%;
     height: 12%;
     margin-top: 23%;
-    background-color: #F81865;
+    background-color: #5b941e;
+    border: none;
     color: white;
 }
 
 .bregistrar{
     width: 25%;
     height: 12%;
-    background-color: #F81865;
+    background-color: #5b941e;
+    border: none;
+    color: white;
+}
+
+.iniciars{
     color: white;
 }
 
@@ -19,6 +25,11 @@
     position: fixed;
     background-color: #2B2B2B;
     left: 0;
+    top: 0;
+}
+
+.iniciars{
+    float:left;
 }
 
 .inireg{
@@ -33,6 +44,11 @@
     line-height: 5em;
 }
 
+.password, .usuario{
+    width: 25%;
+    padding: 1%;
+}
+
 .footer{
     position: fixed;
     left: 0;
@@ -40,7 +56,7 @@
     width: 100%;
     height: 8%;
     background-color: #999999;
-    color: white;
+    color: black;
     text-align: center;
 }
 
