@@ -1,0 +1,31 @@
+#cabeza{
+    display: flex;
+    justify-content:flex-end;
+
+
+}
+
+button{
+    border: 0px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content:flex-start;
+}
+
+#pies{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
