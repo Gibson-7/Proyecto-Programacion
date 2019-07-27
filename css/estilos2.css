@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+}
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    background-color: #2B2B2B;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #2B2B2B;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+.header > button{
+    width: 10%;
+    height: 100%;
+    color:white;
+    background-color: #2B2B2B;
+    border: none;
+}
+.header  > button:hover{
+    text-decoration: underline;
+    color: #91b400;
+}
+.agregara{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 12%;
+    left: 0;
+    background-color: white;
+    padding-top: .5em;
+}
+.alumnonuevo, .proyectonuevo{
+    padding: 1em;
+    background: white;
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.alumnonuevo input[type=text],.proyectonuevo input[type=text]{
+    font-size: 16px;
+    margin: .2em .4em .2em .4em;
+    padding: .2em .4em .2em .4em;
+    background-color: #fff;
+}
+.descripcion{
+    width: 80%;
+    height: 100%;
+    resize: none;
+}
+.alumnonuevo label, .proyectonuevo label{
+    margin: .2em .2em .2em .2em;
+}
+.listalumnos, .listaproyectos{
+    position: absolute;
+    width: 100%;
+    height: auto !important;
+    top: 37%;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
+fieldset{
+    border: .2em solid #5b941e;;
+    padding-left: 1em;
+    padding-right: 4em;
+    width: 100%;
+}
+.divs1{
+    width: 30%;
+    height: 50%;
+    float: left;
+}
+.divs2{
+    width: 40%;
+    height: 50%;
+    float: left;
+}
+.divs3{
+    width: 30%;
+    height: 50%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1em;
+}
+.agregar{
+    width: 80%;
+    padding: 1em;
+    background-color: #5b941e;
+    border: none;
+    color: white;
+}
+.agregar:hover{
+    background-color: #91b400;
+}
