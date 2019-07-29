@@ -27,7 +27,7 @@
                 <label for="fecha" class="labels">Fecha de Nacimiento</label>
                 <input type="date" name="fechana" id="fechana"><br><br>
         
-            <button id="finalizar" class="finalizar">Finalizar</button>
+            <input type="submit" id="continuar" class="continuar" value="Continuar">
             
         </form>
     </div>

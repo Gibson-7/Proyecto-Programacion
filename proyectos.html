@@ -17,14 +17,14 @@
         <button id="salir">Salir</button>
     </div>
     <div class="agregara">
-        <form id="proyectonuevo" class="proyectonuevo">
+        <form action="agregarproyecto.php" method="post" id="proyectonuevo" class="proyectonuevo">
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
             <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
             <input type="text" name="nombrealu" id="nombrealu"></div>
             <div class="divs2"><label for="descripcion">Descripción</label><br>
             <textarea name="descripcion" class="descripcion"></textarea><br></div>
-            <div class="divs3"><button class="agregar">Agregar</button></div>
+            <div class="divs3"><input type="submit" class="agregar" value="Agregar"></input></div>
             </fieldset>
         </form>
     </div>

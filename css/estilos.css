@@ -73,8 +73,8 @@ html, body {
     justify-content: center;
     line-height: 5em;
 }
-.registrar input[type=text],input[type=password],input[type=email],
-.registrardatos input[type=text],input[type=password],input[type=date]
+.registrar input[type=text],.registrar input[type=password],.registrar input[type=email],
+.registrardatos input[type=text],.registrardatos input[type=password],.registrardatos input[type=date]
 {
     padding: 1em;
     font-size: 16px;
@@ -83,7 +83,7 @@ html, body {
     padding: .2em .2em .2em .2em;
     background-color: white;
 }
-.usuarcon input[type=text],input[type=password]{
+.usuarcon input[type=text],.usuarcon input[type=password]{
     padding: 1em;
     font-size: 18px;
     width: 25%;
