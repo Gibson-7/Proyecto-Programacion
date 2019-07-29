@@ -12,25 +12,38 @@
 <body>
     <div class="header">Soy un menu</div>
     <div class="regis regisg">
+<<<<<<< HEAD
         <form class="registrardatos" method="post" action="datosregistro.php">
 <<<<<<< HEAD
                 <div class="div1">
 =======
 
 >>>>>>> e478187... cambios 30 julio
+=======
+        <form class="registrardatos">
+
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                 <label for="nombres" class="labels">Nombre(s)</label>
                 <input type="text" name="nombre" id="nombre"><br>
 
                 <label for="apellidoP" class="labels">Apellido Paterno</label>
+<<<<<<< HEAD
                 <input type="text" name="apellidop" id="apellidop"><br>
  
                 <label for="apellidoM" class="labels">Apellido Materno</label>
                 <input type="text" name="apellidom" id="apellidom"><br>
+=======
+                <input type="text" name="apellidoP" id="apellidoP"><br>
+ 
+                <label for="apellidoM" class="labels">Apellido Materno</label>
+                <input type="text" name="apellioM" id="apellidoM"><br>
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
 
                 <label for="rfc" class="labels">RFC</label>
                 <input type="text" name="rfc" id="rfc"><br>
 
                 <label for="fecha" class="labels">Fecha de Nacimiento</label>
+<<<<<<< HEAD
                 <input type="date" name="fechana" id="fechana"><br>
                 </div>
                 <div class="div1">
@@ -48,6 +61,12 @@
 
                 <input type="submit" id="finalizar" class="finalizar" value="Finalizar">
                 </div>
+=======
+                <input type="date" name="fechana" id="fechana"><br><br>
+        
+            <input type="submit" id="continuar" class="continuar" value="Continuar">
+            
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
         </form>
     </div>
     <div class="footer">

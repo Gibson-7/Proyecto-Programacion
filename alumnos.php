@@ -50,6 +50,7 @@
             <div class="divs1"><label for="nombrealumno">Nombre(s)</label>
             <input type="text" name="nombrealu" id="nombrealu"><br>
             <label for="apellidopalumno">Apellido Paterno</label>
+<<<<<<< HEAD
             <input type="text" name="apellidopalu" id="apellidopalu">
             <label for="apellidomalumno">Apellido Materno</label>
             <input type="text" name="apellidomalu" id="apellidomalu"><br>
@@ -71,6 +72,14 @@
 =======
             <div class="divs3"><input type="submit" class="agregaralu" value="Agregar"></div>
 >>>>>>> e478187... cambios 30 julio
+=======
+            <input type="text" name="apellidopalu" id="apellidopalu"></div>
+            <div class="divs2"><label for="apellidomalumno">Apellido Materno</label>
+            <input type="text" name="apellidomalu" id="apellidomalu"><br>
+            <label for="matriculaalumno">Matrícula</label>
+            <input type="text" name="matriculaalumno" id="matriculaalumno"></div>
+            <div class="divs3"><button class="agregar">Agregar</button></div>
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
             </fieldset>
         </form>
     </div>
@@ -85,6 +94,11 @@
                     <th>Matrícula</th>
                 </tr>
                 <?php
+<<<<<<< HEAD
+=======
+                $sql="SELECT nombre,apellido_p,apellido_m,matricula FROM alumno"; //Se trae los datos de la tabla alumno
+                $result=mysqli_query($conexion,$sql); //
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>
@@ -92,7 +106,11 @@
                     <td><?php echo $mostrar['nombre']?></td>
                     <td><?php echo $mostrar['apellido_p']?></td>
                     <td><?php echo $mostrar['apellido_m']?></td>
+<<<<<<< HEAD
                     <td><?php echo $mostrar['extras']?></td>
+=======
+                    <td><?php echo $mostrar['matricula']?></td>
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                 </tr>
                 <?php
                 }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.

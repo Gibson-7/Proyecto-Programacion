@@ -44,6 +44,7 @@
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
             <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
+<<<<<<< HEAD
             <input type="text" name="nombrepro" id="nombrepro"></div>
             <div class="divs2"><label for="descripcion">Descripción</label><br>
 <<<<<<< HEAD
@@ -57,6 +58,12 @@
             <textarea name="descripcion" class="descripcion"></textarea><br></div>
             <div class="divs3"><input type="submit" class="agregarpro" value="Agregar"></div>
 >>>>>>> e478187... cambios 30 julio
+=======
+            <input type="text" name="nombrealu" id="nombrealu"></div>
+            <div class="divs2"><label for="descripcion">Descripción</label><br>
+            <textarea name="descripcion" class="descripcion"></textarea><br></div>
+            <div class="divs3"><input type="submit" class="agregar" value="Agregar"></div>
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
             </fieldset>
         </form>
     </div>
@@ -65,18 +72,28 @@
         <table>
             <thead>
                 <tr>
+<<<<<<< HEAD
                     <th>Código</th>
+=======
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                     <th>Nombre del proyecto</th>
                     <th>Descripción</th>
                 </tr>
                 <?php
+<<<<<<< HEAD
                 $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
+=======
+                $sql="SELECT nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                 $result=mysqli_query($conexion,$sql); //
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>
                 <tr>
+<<<<<<< HEAD
                 <td><?php echo $mostrar['id']?></td>
+=======
+>>>>>>> 0c5fe27... sobre estos ir avanzando, concentrarse en los php
                     <td><?php echo $mostrar['nombre']?></td>
                     <td><?php echo $mostrar['descripcion']?></td>
                 </tr>
