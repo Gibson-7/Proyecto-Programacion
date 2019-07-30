@@ -112,6 +112,9 @@ html, body {
 .continuar:hover{
     background-color: #91b400;
 }
+.finalizar:hover{
+    background-color: #91b400;
+}
 .labels{
     display: inline-block;
     width: 18%;
