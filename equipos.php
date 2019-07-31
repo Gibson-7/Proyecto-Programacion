@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/estilos2.css">
-    <title>Proyectos</title>
+    <title>Equipos</title>
 </head>
 <body>
 <div class="principal">
@@ -37,14 +37,14 @@
     </div>
 </div>
     <div class="agregara">
-        <form action="agregarproyecto.php" method="post" id="proyectonuevo" class="proyectonuevo">
+        <form action="agregarequipos.php" method="post" id="equiponuevo" class="equiponuevo">
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
             <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
             <input type="text" name="nombrealu" id="nombrealu"></div>
             <div class="divs2"><label for="descripcion">Descripción</label><br>
             <textarea name="descripcion" class="descripcion"></textarea><br></div>
-            <div class="divs3"><input type="submit" class="agregarpro" value="Agregar"></div>
+            <div class="divs3"><input type="submit" class="agregarequ" value="Agregar"></div>
             </fieldset>
         </form>
     </div>

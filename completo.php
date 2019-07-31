@@ -11,12 +11,14 @@ $conexion=new mysqli('localhost', 'root', '', 'proyecto'); //Se hace la conexió
     $correo = $_POST['correo'];
     $sql = "INSERT INTO usuario(nombreu,contrasenia,correo,id_rol) VALUES ('$nombreu','$contrasenia','$correo','1')";
     //Se crea una variable, la cual permitirá insertar los valores dentro de la base de datos.
+    $sqli = "INSERT INTO maestro(id_rol) VALUES (mysqli_last_id)"
     if($conexion->query($sql)===true){
     }
     else{
         die("Error al insertar los datos.");
     }
+    $conexion->close(); //Cierra la conexión.
 ?>
 <?php
-header('location:iniciars.php');
+header('location:iniciars.php'); //Direcciona a la página que se menciona.
 ?>

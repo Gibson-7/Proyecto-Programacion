@@ -20,17 +20,18 @@
                     <li><a>Alumnos</a>
                         <ul>
                             <li><a href="alumnos.php">Listado de alumnos</a></li>
-                            <li><a href="#">Listado de equipos</a></li>
+                            <li><a href="equipos.php">Listado de equipos</a></li>
                         </ul>
                     </li>
                     <li><a>Proyectos</a>
                         <ul>
                             <li><a href="proyectos.php">Listado de proyectos</a></li>
+                            <li><a href="actividades.php">Listado de actividades</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Usuario</a></li>
                     <li><a href="#">Ayuda</a></li>
-                    <li><a href="#">Salir</a></li>
+                    <li><a href="cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
     </div>
@@ -42,12 +43,18 @@
             <div class="divs1"><label for="nombrealumno">Nombre(s)</label>
             <input type="text" name="nombrealu" id="nombrealu"><br>
             <label for="apellidopalumno">Apellido Paterno</label>
-            <input type="text" name="apellidopalu" id="apellidopalu"></div>
-            <div class="divs2"><label for="apellidomalumno">Apellido Materno</label>
+            <input type="text" name="apellidopalu" id="apellidopalu">
+            <label for="apellidomalumno">Apellido Materno</label>
             <input type="text" name="apellidomalu" id="apellidomalu"><br>
             <label for="matriculaalumno">Matrícula</label>
             <input type="text" name="matriculaalumno" id="matriculaalumno"></div>
-            <div class="divs3"><button class="agregar">Agregar</button></div>
+            <div class="divs2">
+            <label for="usuarioalumno">Usuario</label>
+            <input type="text" name="usuarioalu" id="usuarioalu"><br>
+            <label for="passalumno">Contraseña</label>
+            <input type="text" name="passalu" id="passalu">
+            </div>
+            <div class="divs3"><input type="submit" class="agregaralu" value="Agregar"></div>
             </fieldset>
         </form>
     </div>

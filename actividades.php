@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/estilos2.css">
-    <title>Proyectos</title>
+    <title>Actividades</title>
 </head>
 <body>
 <div class="principal">
@@ -37,36 +37,41 @@
     </div>
 </div>
     <div class="agregara">
-        <form action="agregarproyecto.php" method="post" id="proyectonuevo" class="proyectonuevo">
+        <form action="agregaractividad.php" method="post" id="actividadnuevo" class="actividadnuevo">
             <fieldset>
-                <legend>Agregar nuevo proyecto</legend>
-            <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
-            <input type="text" name="nombrealu" id="nombrealu"></div>
-            <div class="divs2"><label for="descripcion">Descripción</label><br>
-            <textarea name="descripcion" class="descripcion"></textarea><br></div>
-            <div class="divs3"><input type="submit" class="agregarpro" value="Agregar"></div>
+                <legend>Agregar nueva actividad</legend>
+            <div class="divs1"><label for="nombreactividad">Nombre</label><br>
+            <input type="text" name="nombreactividad" id="nombreactividad"></div>
+            <div class="divs2"><select name="proyectoact">
+            <option value="0">Seleccione:</option>
+            <?php
+            $query = $mysqli -> query ("SELECT * FROM proyecto");
+            while ($valores = mysqli_fetch_array($query)) {
+            echo '<option value="'.$valores[id].'">'.$valores[nombre].'</option>';
+            }
+           ?><br>
+            </div>
+            <div class="divs3"><input type="submit" class="agregaract" value="Agregar"></div>
             </fieldset>
         </form>
     </div>
     <div class="listaproyectos">
-        <h1>Listado de los proyectos</h1>
+        <h1>Listado de activades</h1>
         <table>
             <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Nombre del proyecto</th>
-                    <th>Descripción</th>
+                    <th>Código del proyecto</th>
+                    <th>Nombre de la actividad</th>
                 </tr>
                 <?php
-                $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
+                $sql="SELECT id_proyecto,nombre FROM actividad"; //Se trae los datos de la tabla alumno
                 $result=mysqli_query($conexion,$sql); //
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>
                 <tr>
-                <td><?php echo $mostrar['id']?></td>
+                <td><?php echo $mostrar['id_proyecto']?></td>
                     <td><?php echo $mostrar['nombre']?></td>
-                    <td><?php echo $mostrar['descripcion']?></td>
                 </tr>
                 <?php
                 }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
