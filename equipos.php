@@ -1,8 +1,11 @@
 <?php
     require("conexion.php");
+<<<<<<< HEAD
 
     $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
     $result=mysqli_query($conexion,$sql); //
+=======
+>>>>>>> e478187... cambios 30 julio
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,6 +46,7 @@
         <form action="agregarequipos.php" method="post" id="equiponuevo" class="equiponuevo">
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
+<<<<<<< HEAD
             <div class="divs1"><label for="nombreequipo">Nombre del equipo</label><br>
             <input type="text" name="nombrequipo" id="nombrequipo"></div>
             <div class="divs2"><label for="liderproyecto">Líder del proyecto</label><br>
@@ -55,6 +59,13 @@
             <select name="nombreproyecto" class="nombreproyecto">
             <option value="0">Seleccione:</option>
             </select></div>
+=======
+            <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
+            <input type="text" name="nombrealu" id="nombrealu"></div>
+            <div class="divs2"><label for="descripcion">Descripción</label><br>
+            <textarea name="descripcion" class="descripcion"></textarea><br></div>
+            <div class="divs3"><input type="submit" class="agregarequ" value="Agregar"></div>
+>>>>>>> e478187... cambios 30 julio
             </fieldset>
         </form>
     </div>
@@ -68,6 +79,11 @@
                     <th>Descripción</th>
                 </tr>
                 <?php
+<<<<<<< HEAD
+=======
+                $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
+                $result=mysqli_query($conexion,$sql); //
+>>>>>>> e478187... cambios 30 julio
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>

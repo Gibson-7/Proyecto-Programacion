@@ -13,7 +13,11 @@
     <div class="header">Soy un menu</div>
     <div class="regis regisg">
         <form class="registrardatos" method="post" action="datosregistro.php">
+<<<<<<< HEAD
                 <div class="div1">
+=======
+
+>>>>>>> e478187... cambios 30 julio
                 <label for="nombres" class="labels">Nombre(s)</label>
                 <input type="text" name="nombre" id="nombre"><br>
 

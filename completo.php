@@ -12,6 +12,7 @@ include_once("conexion.php");
     $sql = "INSERT INTO maestro(usuario,contrasenia,correo,id_rol) VALUES ('$nombreu','$contrasenia','$correo','1')
     WHERE rfc = '$_SESSION['clave']'";
     //Se crea una variable, la cual permitirá insertar los valores dentro de la base de datos.
+    $sqli = "INSERT INTO maestro(id_rol) VALUES (mysqli_last_id)"
     if($conexion->query($sql)===true){
     }
     else{

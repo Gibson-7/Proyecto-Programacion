@@ -53,15 +53,24 @@
             <input type="text" name="apellidopalu" id="apellidopalu">
             <label for="apellidomalumno">Apellido Materno</label>
             <input type="text" name="apellidomalu" id="apellidomalu"><br>
+<<<<<<< HEAD
             <label for="matriculalumno">Matrícula</label>
             <input type="text" name="matriculalumno" id="matriculalumno"></div>
+=======
+            <label for="matriculaalumno">Matrícula</label>
+            <input type="text" name="matriculaalumno" id="matriculaalumno"></div>
+>>>>>>> e478187... cambios 30 julio
             <div class="divs2">
             <label for="usuarioalumno">Usuario</label>
             <input type="text" name="usuarioalu" id="usuarioalu"><br>
             <label for="passalumno">Contraseña</label>
             <input type="text" name="passalu" id="passalu">
             </div>
+<<<<<<< HEAD
             <div class="divs3"><input type="submit" class="agregar" value="Agregar"></div>
+=======
+            <div class="divs3"><input type="submit" class="agregaralu" value="Agregar"></div>
+>>>>>>> e478187... cambios 30 julio
             </fieldset>
         </form>
     </div>

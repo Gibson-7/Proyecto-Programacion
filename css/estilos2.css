@@ -63,7 +63,11 @@ html, body {
     padding-top: .5em;
 }
 
+<<<<<<< HEAD
 .alumnonuevo ,.proyectonuevo ,.actividadnuevo ,.equiponuevo {
+=======
+.alumnonuevo, .proyectonuevo{
+>>>>>>> e478187... cambios 30 julio
     padding: 1em;
     background: white;
     border: none;
