@@ -21,7 +21,7 @@ html, body {
     
 }
 .inireg{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 40%;
     background-color: white;
@@ -73,12 +73,11 @@ html, body {
     justify-content: center;
     line-height: 5em;
 }
-.registrar input[type=text],.registrar input[type=password],.registrar input[type=email],
-.registrardatos input[type=text],.registrardatos input[type=password],.registrardatos input[type=date]
+.registrardatos input[type=email],.registrardatos input[type=text],.registrardatos input[type=password],.registrardatos input[type=date]
 {
     padding: 1em;
     font-size: 16px;
-    width: 25%;
+    width: 50%;
     margin: .2em .2em .2em .2em;
     padding: .2em .2em .2em .2em;
     background-color: white;
@@ -86,7 +85,7 @@ html, body {
 .usuarcon input[type=text],.usuarcon input[type=password]{
     padding: 1em;
     font-size: 18px;
-    width: 25%;
+    width: 50%;
     margin: .5em .5em .5em .5em;
     padding: .5em .5em .5em .5em;
     background-color: white;
@@ -102,15 +101,12 @@ html, body {
     justify-content: center;
     line-height: 2em;
 }
-.continuar, .finalizar{
-        width: 18%;
+.finalizar{
+        width: 38%;
         padding: 1em;
         background: #5b941e;
         color:white;
         border: none;
-}
-.continuar:hover{
-    background-color: #91b400;
 }
 .finalizar:hover{
     background-color: #91b400;
@@ -130,9 +126,6 @@ html, body {
     text-align: center;
     justify-content: center;
 }
-.regisp{
-    padding-top:5em;
-}
 .regisg{
     padding-top:2em;
 }
@@ -143,4 +136,9 @@ html, body {
     margin: .2em .2em .2em .2em;
     padding: .2em .2em .2em .2em;
     background-color: white;
+}
+.div1{
+    width: 50%;
+    height: 100%;
+    float: left;
 }

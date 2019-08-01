@@ -1,6 +1,24 @@
 $(document).ready(function () {
 
-    $("#continuar").click(function (e) { 
+    $("#finalizar").click(function (e) { 
+        var cont = $('#pss').val();
+        var cont2 = $('#pss_validado').val(); 
+        if(($("#usuario").val()=='')){
+            alert('El campo usuario se encuentra vacío.'); 
+            return false;
+        }
+        if(($("#pss").val()=='')){
+            alert('El campo contraseña se encuentra vacío.'); 
+            return false;
+        }
+        if(($("#pss_validado").val()=='')){
+            alert('Valide las contraseñas.'); 
+            return false;
+        }
+        if(($("#correo").val()=='')){
+            alert('El campo correo se encuentra vacío.'); 
+            return false;
+        }
         if(($("#nombre").val()=='')){
             alert('El campo nombre se encuentra vacío.'); 
             return false;
@@ -19,26 +37,6 @@ $(document).ready(function () {
         }
         if(($("#fechana").val()=='')){
             alert('El campo fecha de nacimiento se encuentra vacío.'); 
-            return false;
-        }
-    });
-    $("#finalizar").click(function (e) { 
-        var cont = $('#pss').val();
-        var cont2 = $('#pss_validado').val(); 
-        if(($("#usuario").val()=='')){
-            alert('El campo usuario se encuentra vacío.'); 
-            return false;
-        }
-        if(($("#pss").val()=='')){
-            alert('El campo contraseña se encuentra vacío.'); 
-            return false;
-        }
-        if(($("#pss_validado").val()=='')){
-            alert('Valide las contraseñas.'); 
-            return false;
-        }
-        if(($("#correo").val()=='')){
-            alert('El campo correo se encuentra vacío.'); 
             return false;
         }
         if(cont != cont2){

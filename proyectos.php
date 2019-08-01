@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    require_once("conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,6 +11,9 @@
     <title>Proyectos</title>
 </head>
 <body>
+<?php
+    include("validaruno.php");
+?>
 <div class="principal">
     <div class="logo">Logo</div>
     <div class="sobrante"> 
@@ -41,10 +44,14 @@
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
             <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
-            <input type="text" name="nombrealu" id="nombrealu"></div>
+            <input type="text" name="nombrepro" id="nombrepro"></div>
             <div class="divs2"><label for="descripcion">Descripción</label><br>
-            <textarea name="descripcion" class="descripcion"></textarea><br></div>
-            <div class="divs3"><input type="submit" class="agregarpro" value="Agregar"></div>
+            <textarea name="descripcionpro" class="descripcionpro"></textarea><br>
+            <input type="submit" class="agregar" value="Agregar"></div>
+            <div class="divs3">
+            <label for="fecha" class="labels">Fecha de entrega</label><br>
+            <input type="date" name="fechaen" id="fechaen">
+            </div>
             </fieldset>
         </form>
     </div>

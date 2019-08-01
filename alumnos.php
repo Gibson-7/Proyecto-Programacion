@@ -1,5 +1,8 @@
 <?php
-    require("conexion.php");
+    require_once("conexion.php");
+
+    $sql="SELECT nombre,apellido_p,apellido_m,extras FROM usuario WHERE id_rol IS NULL OR id_rol = 2 OR id_rol = 3"; //Se trae los datos de la tabla usuario
+    $result=mysqli_query($conexion,$sql); //
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,6 +14,9 @@
     <title>Alumnos</title>
 </head>
 <body>
+<?php
+    include("validaruno.php")
+?>
 <div class="principal">
     <div class="logo">Logo</div>
     <div class="sobrante"> 
@@ -34,10 +40,11 @@
                     <li><a href="cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
-    </div>
+</div>
+
 </div>
     <div class="agregara">
-        <form id="alumnonuevo" class="alumnonuevo" method="post">
+        <form id="alumnonuevo" class="alumnonuevo" method="post" action="agregaralumno.php">
             <fieldset>
                 <legend>Agregar alumno</legend>
             <div class="divs1"><label for="nombrealumno">Nombre(s)</label>
@@ -46,15 +53,15 @@
             <input type="text" name="apellidopalu" id="apellidopalu">
             <label for="apellidomalumno">Apellido Materno</label>
             <input type="text" name="apellidomalu" id="apellidomalu"><br>
-            <label for="matriculaalumno">Matrícula</label>
-            <input type="text" name="matriculaalumno" id="matriculaalumno"></div>
+            <label for="matriculalumno">Matrícula</label>
+            <input type="text" name="matriculalumno" id="matriculalumno"></div>
             <div class="divs2">
             <label for="usuarioalumno">Usuario</label>
             <input type="text" name="usuarioalu" id="usuarioalu"><br>
             <label for="passalumno">Contraseña</label>
             <input type="text" name="passalu" id="passalu">
             </div>
-            <div class="divs3"><input type="submit" class="agregaralu" value="Agregar"></div>
+            <div class="divs3"><input type="submit" class="agregar" value="Agregar"></div>
             </fieldset>
         </form>
     </div>
@@ -69,8 +76,6 @@
                     <th>Matrícula</th>
                 </tr>
                 <?php
-                $sql="SELECT nombre,apellido_p,apellido_m,matricula FROM alumno"; //Se trae los datos de la tabla alumno
-                $result=mysqli_query($conexion,$sql); //
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>
@@ -78,7 +83,7 @@
                     <td><?php echo $mostrar['nombre']?></td>
                     <td><?php echo $mostrar['apellido_p']?></td>
                     <td><?php echo $mostrar['apellido_m']?></td>
-                    <td><?php echo $mostrar['matricula']?></td>
+                    <td><?php echo $mostrar['extras']?></td>
                 </tr>
                 <?php
                 }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.

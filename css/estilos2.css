@@ -63,7 +63,7 @@ html, body {
     padding-top: .5em;
 }
 
-.alumnonuevo, .proyectonuevo{
+.alumnonuevo ,.proyectonuevo ,.actividadnuevo ,.equiponuevo {
     padding: 1em;
     background: white;
     border: none;
@@ -71,13 +71,14 @@ html, body {
     flex-flow: row wrap;
     align-items: center;
 }
-.alumnonuevo input[type=text],.proyectonuevo input[type=text]{
+.alumnonuevo input[type=text],.proyectonuevo input[type=text],.actividadnuevo input[type=text],
+.equiponuevo input[type=text],.proyectoact,.proyectolid,.nombreproyecto, #fechaen{
     font-size: 12pt;
     margin: .2em .4em .2em .4em;
     padding: .2em .4em .2em .4em;
     background-color: white;
 }
-.descripcion{
+.descripcionpro,.descripcionact{
     width: 80%;
     height: 100%;
     resize: none;
@@ -85,7 +86,7 @@ html, body {
     margin: .2em .4em .2em .4em;
     padding: .2em .4em .2em .4em;
 }
-.alumnonuevo label, .proyectonuevo label{
+.alumnonuevo label, .proyectonuevo label, .actividadnuevo label, .equiponuevo label{
     margin: .2em .2em .2em .2em;
 }
 .listalumnos, .listaproyectos{
@@ -124,7 +125,6 @@ fieldset{
     float: left;
     text-align: center;
     justify-content: center;
-    padding-top: 1em;
 }
 .agregar{
     width: 80%;
