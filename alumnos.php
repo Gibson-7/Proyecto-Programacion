@@ -47,7 +47,7 @@
         <form id="alumnonuevo" class="alumnonuevo" method="post" action="agregaralumno.php">
             <fieldset>
                 <legend>Agregar alumno</legend>
-            <div class="divs1"><label for="nombrealumno">Nombre(s)</label>
+            <div class="divs"><label for="nombrealumno">Nombre(s)</label>
             <input type="text" name="nombrealu" id="nombrealu"><br>
             <label for="apellidopalumno">Apellido Paterno</label>
             <input type="text" name="apellidopalu" id="apellidopalu">
@@ -55,13 +55,13 @@
             <input type="text" name="apellidomalu" id="apellidomalu"><br>
             <label for="matriculalumno">Matrícula</label>
             <input type="text" name="matriculalumno" id="matriculalumno"></div>
-            <div class="divs2">
+            <div class="divs">
             <label for="usuarioalumno">Usuario</label>
             <input type="text" name="usuarioalu" id="usuarioalu"><br>
             <label for="passalumno">Contraseña</label>
             <input type="text" name="passalu" id="passalu">
             </div>
-            <div class="divs3"><input type="submit" class="agregar" value="Agregar"></div>
+            <div class="divs"><input type="submit" class="agregar" value="Agregar"></div>
             </fieldset>
         </form>
     </div>

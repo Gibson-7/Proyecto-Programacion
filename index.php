@@ -39,6 +39,11 @@
         </nav>
     </div>
 </div>
+<div class="base">
+    <?php
+    echo "<p>Bienvenido $_SESSION[nombre]</p>";
+    ?>
+</div>
     <div class="footer">
         <p> - 2019</p>
     </div>

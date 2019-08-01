@@ -43,12 +43,12 @@
         <form action="agregarproyecto.php" method="post" id="proyectonuevo" class="proyectonuevo">
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
-            <div class="divs1"><label for="nombreproyecto">Nombre</label><br>
+            <div class="divs"><label for="nombreproyecto">Nombre</label><br>
             <input type="text" name="nombrepro" id="nombrepro"></div>
-            <div class="divs2"><label for="descripcion">Descripción</label><br>
+            <div class="divs"><label for="descripcion">Descripción</label><br>
             <textarea name="descripcionpro" class="descripcionpro"></textarea><br>
             <input type="submit" class="agregar" value="Agregar"></div>
-            <div class="divs3">
+            <div class="divs">
             <label for="fecha" class="labels">Fecha de entrega</label><br>
             <input type="date" name="fechaen" id="fechaen">
             </div>

@@ -53,18 +53,18 @@
         <form action="agregaractividad.php" method="post" id="actividadnuevo" class="actividadnuevo">
             <fieldset>
                 <legend>Agregar nueva actividad</legend>
-            <div class="divs1"><label for="nombreactividad">Nombre</label><br>
+            <div class="divs"><label for="nombreactividad">Nombre</label><br>
             <input type="text" name="nombreactividad" id="nombreactividad"></div>
-            <div class="divs2"><label for="descripcion">Descripción</label><br>
+            <div class="divs"><label for="descripcion">Descripción</label><br>
             <textarea name="descripcionact" class="descripcionact"></textarea><br>
             <input type="submit" class="agregar" value="Agregar">
             </div>
-            <div class="divs3">
+            <div class="divs">
                 <label for="actividadproyecto">Proyecto</label><br>
             <select name="proyectoact" id="proyectoact" class="proyectoact">     
             <option value ="">Seleccione...</option>
             <?php WHILE ($rows = $resultado->fetch_assoc()){ ?>
-            <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre']; ?>
+            <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre'] ?>
             </option>
             <?php } ?>       
             </select>
