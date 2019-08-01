@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+}
+.header{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 12%;
+    background-color: #2B2B2B;
+}
+.logo{
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    top: 12%;
+    left: 0%;
+    text-align: center;
+    justify-content: center;
+    
+}
+.inireg{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    top: 52%;
+    left: 0%;
+    line-height: 5em;
+    padding-top: 5%;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #2B2B2B;
+    color: white;
+    text-align: center;
+    bottom: 0%;
+    left: 0%;
+}
+.biniciar, .bregistrar, .ingresar{
+    width: 27%;
+    padding: 1em;
+    background-color: #5b941e;
+    border: none;
+    color: white;
+}
+.biniciar:hover{
+    background-color: #91b400;
+}
+.bregistrar:hover{
+    background-color: #91b400;
+}
+.uspa{
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    top: 52%;
+    left: 0%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
+.usuarcon{
+    padding: 1em;
+    background: white;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    line-height: 5em;
+}
+.registrardatos input[type=email],.registrardatos input[type=text],.registrardatos input[type=password],.registrardatos input[type=date]
+{
+    padding: 1em;
+    font-size: 16px;
+    width: 50%;
+    margin: .2em .2em .2em .2em;
+    padding: .2em .2em .2em .2em;
+    background-color: white;
+}
+.usuarcon input[type=text],.usuarcon input[type=password]{
+    padding: 1em;
+    font-size: 18px;
+    width: 50%;
+    margin: .5em .5em .5em .5em;
+    padding: .5em .5em .5em .5em;
+    background-color: white;
+}
+.ingresar:hover{
+    background-color: #91b400;
+}
+.registrar, .registrardatos{
+    padding: 1em;
+    background: white;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    line-height: 2em;
+}
+.finalizar{
+        width: 38%;
+        padding: 1em;
+        background: #5b941e;
+        color:white;
+        border: none;
+}
+.finalizar:hover{
+    background-color: #91b400;
+}
+.labels{
+    display: inline-block;
+    width: 18%;
+    padding: 1em;
+}
+.regis{
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    top: 12%;
+    left: 0%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
+.regisg{
+    padding-top:2em;
+}
+#alma{
+    padding: 1em;
+    font-size: 18px;
+    width: 25%;
+    margin: .2em .2em .2em .2em;
+    padding: .2em .2em .2em .2em;
+    background-color: white;
+}
+.div1{
+    width: 50%;
+    height: 100%;
+    float: left;
+}

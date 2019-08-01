@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+}
+.principal{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    z-index:100;
+    background-color: #2B2B2B;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #2B2B2B;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+.logo{
+    width: 30%;
+    height: 100%;
+}
+.sobrante{
+    width: 70%;
+    height: 100%;
+}
+.nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav a {
+    display: block;
+    padding: 1.7em;
+    background-color: #2B2B2B;
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover {
+    background-color: #5b941e;
+}
+.nav ul li ul {
+    display: none;
+}
+.nav ul li a:hover + ul, .nav ul li ul:hover {
+    display: block;
+}
+.agregara{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 12%;
+    left: 0;
+    background-color: white;
+    padding-top: .5em;
+}
+
+.alumnonuevo ,.proyectonuevo ,.actividadnuevo ,.equiponuevo {
+    padding: 1em;
+    background: white;
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.alumnonuevo input[type=text],.proyectonuevo input[type=text],.actividadnuevo input[type=text],
+.equiponuevo input[type=text],.proyectoact,.proyectolid,.nombreproyecto, #fechaen{
+    font-size: 12pt;
+    margin: .2em .4em .2em .4em;
+    padding: .2em .4em .2em .4em;
+    background-color: white;
+}
+.descripcionpro,.descripcionact{
+    width: 80%;
+    height: 100%;
+    resize: none;
+    font-size: 12pt;
+    margin: .2em .4em .2em .4em;
+    padding: .2em .4em .2em .4em;
+}
+.alumnonuevo label, .proyectonuevo label, .actividadnuevo label, .equiponuevo label{
+    margin: .2em .2em .2em .2em;
+}
+.listalumnos, .listaproyectos{
+    position: absolute;
+    width: 100%;
+    height: auto !important;
+    top: 45%;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
+fieldset{
+    border: .2em solid #5b941e;
+    padding-left: 1em;
+    padding-right: 4em;
+    width: 100%;
+}
+.divs1{
+    width: 30%;
+    height: 50%;
+    float: left;
+    justify-content: center;
+    text-align: center;
+}
+.divs2{
+    width: 40%;
+    height: 50%;
+    float: left;
+    justify-content: center;
+    text-align: center;
+}
+.divs3{
+    width: 30%;
+    height: 50%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+}
+.agregar{
+    width: 80%;
+    padding: 1em;
+    background-color: #5b941e;
+    border: none;
+    color: white;
+}
+.agregar:hover{
+    background-color: #91b400;
+}
