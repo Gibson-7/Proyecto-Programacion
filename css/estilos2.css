@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
 }
+
 .principal{
     position: absolute;
     left: 0;
@@ -13,6 +14,7 @@ html, body {
     flex-flow: row wrap;
     align-items: center;
 }
+
 .base{
     position: absolute;
     width: 100%;
@@ -22,6 +24,7 @@ html, body {
     background-color: white;
     padding-top:.5em;
 }
+
 .footer{
     position: fixed;
     width: 100%;
@@ -32,20 +35,24 @@ html, body {
     bottom: 0;
     left: 0;
 }
+
 .logo{
     width: 30%;
     height: 100%;
 }
+
 .sobrante{
     width: 70%;
     height: 100%;
 }
+
 .nav ul {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
 }
+
 .nav a {
     display: block;
     padding: 1.7em;
@@ -53,15 +60,19 @@ html, body {
     text-decoration: none;
     color: white;
 }
+
 .nav a:hover {
     background-color: #5b941e;
 }
+
 .nav ul li ul {
     display: none;
 }
+
 .nav ul li a:hover + ul, .nav ul li ul:hover {
     display: block;
 }
+
 .agregara{
     position: absolute;
     width: 100%;
@@ -71,6 +82,7 @@ html, body {
     background-color: white;
     padding-top: .5em;
 }
+
 .agregarequi{
     position: absolute;
     width: 100%;
@@ -80,7 +92,8 @@ html, body {
     background-color: white;
     padding-top: .5em;
 }
-.alumnonuevo ,.proyectonuevo ,.actividadnuevo ,.equipo{
+
+.formulario{
     padding: 1em;
     background: white;
     border: none;
@@ -88,14 +101,16 @@ html, body {
     flex-flow: row wrap;
     align-items: center;
 }
-.alumnonuevo input[type=text],.proyectonuevo input[type=text],.actividadnuevo input[type=text],
-.equipo input[type=text],.proyectoact,.proyectolid, select, #fechaen{
+
+.formulario input[type=text],
+.proyectoact,.proyectolid, select, #fechaen, #fechaacte{
     font-size: 12pt;
     margin: .2em .4em .2em .4em;
     padding: .2em .4em .2em .4em;
     background-color: white;
 }
-.descripcionpro,.descripcionact{
+
+.descripcionpro,#descripcionact,.comentariosm,.comentariosl{
     width: 80%;
     height: 100%;
     resize: none;
@@ -103,9 +118,11 @@ html, body {
     margin: .2em .4em .2em .4em;
     padding: .2em .4em .2em .4em;
 }
-.alumnonuevo label, .proyectonuevo label, .actividadnuevo label, .equipo label{
+
+.formulario label{
     margin: .2em .2em .2em .2em;
 }
+
 .listalumnos, .listaproyectos{
     position: absolute;
     width: 100%;
@@ -116,12 +133,14 @@ html, body {
     text-align: center;
     justify-content: center;
 }
+
 fieldset{
     border: .2em solid #5b941e;
     padding-left: 1em;
     padding-right: 4em;
     width: 100%;
 }
+
 .divs{
     width: 33%;
     height: 50%;
@@ -129,6 +148,7 @@ fieldset{
     justify-content: center;
     text-align: center;
 }
+
 .agregar{
     width: 80%;
     padding: 1em;
@@ -136,6 +156,7 @@ fieldset{
     border: none;
     color: white;
 }
+
 .agregar:hover{
     background-color: #91b400;
 }

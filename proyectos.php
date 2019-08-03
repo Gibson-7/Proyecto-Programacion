@@ -1,6 +1,7 @@
 <?php
-    require_once("conexion.php");
+    include_once("conexion.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,9 +12,11 @@
     <title>Proyectos</title>
 </head>
 <body>
+    
 <?php
-    include("validaruno.php");
+    include("db/usuarios/validaruno.php");
 ?>
+
 <div class="principal">
     <div class="logo">Logo</div>
     <div class="sobrante"> 
@@ -34,27 +37,38 @@
                     </li>
                     <li><a href="#">Usuario</a></li>
                     <li><a href="#">Ayuda</a></li>
-                    <li><a href="cerrarsesion.php">Salir</a></li>
+                    <li><a href="db/usuarios/cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
     </div>
 </div>
+
     <div class="agregara">
-        <form action="agregarproyecto.php" method="post" id="proyectonuevo" class="proyectonuevo">
+        <form action="db/acciones-maestro/agregarproyecto.php" method="post" id="proyectonuevo" class="formulario">
             <fieldset>
                 <legend>Agregar nuevo proyecto</legend>
-            <div class="divs"><label for="nombreproyecto">Nombre</label><br>
-            <input type="text" name="nombrepro" id="nombrepro"></div>
-            <div class="divs"><label for="descripcion">Descripción</label><br>
-            <textarea name="descripcionpro" class="descripcionpro"></textarea><br>
-            <input type="submit" class="agregar" value="Agregar"></div>
-            <div class="divs">
-            <label for="fecha" class="labels">Fecha de entrega</label><br>
-            <input type="date" name="fechaen" id="fechaen">
-            </div>
+
+                    <div class="divs"><label for="nombreproyecto">Nombre</label><br>
+                        <input type="text" name="nombrepro" id="nombrepro">
+                    </div>
+
+                    <div class="divs"><label for="descripcion">Descripción</label><br>
+                        <textarea name="descripcionpro" id="descripcionpro" class="descripcionpro"></textarea><br>
+                        <input type="submit" class="agregar" value="Agregar">
+                    </div>
+
+                    <div class="divs">
+                        <label for="fecha" class="labels">Fecha de entrega</label><br>
+                        <input type="date" name="fechaen" id="fechaen">
+                    </div>
+
             </fieldset>
         </form>
+
+        
+
     </div>
+
     <div class="listaproyectos">
         <h1>Listado de los proyectos</h1>
         <table>
@@ -63,6 +77,7 @@
                     <th>Código</th>
                     <th>Nombre del proyecto</th>
                     <th>Descripción</th>
+                    <th>Modificar</th>
                 </tr>
                 <?php
                 $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
@@ -74,6 +89,9 @@
                 <td><?php echo $mostrar['id']?></td>
                     <td><?php echo $mostrar['nombre']?></td>
                     <td><?php echo $mostrar['descripcion']?></td>
+                    <td>
+                    <a href="">Modificar</a>
+                    </td>
                 </tr>
                 <?php
                 }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
@@ -81,8 +99,13 @@
             </thead>
         </table>
     </div>
+    
+
     <div class="footer">
         <p> - 2019</p>
     </div>
+
+
+    
 </body>
 </html>

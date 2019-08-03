@@ -11,7 +11,7 @@
     <div class="header">Soy un menu</div>
     <div class="logo">Logo</div>
     <div class="uspa">
-        <form id="usuarcon" class="usuarcon" action="proceso.php" method="post">
+        <form id="usuarcon" class="usuarcon" action="db/usuarios/proceso.php" method="post">
             <input type="text" id="usuario" class="usuario" name="usr" placeholder="Usuario"><br>
             <input type="password" id="password" class="password" name="pass" placeholder="Contraseña"><br>
             <button id="ingresar" class="ingresar">Ingresar</button>

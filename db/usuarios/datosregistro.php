@@ -1,6 +1,6 @@
 <?php
 
-    include_once("conexion.php");
+include_once("../../conexion.php");
 
     $nombre = $_POST['nombre']; //Se crea una variable para cada dato, la cual será igual al POST y lo    
     $apellido_p = $_POST['apellidop'];//que recibirá son los datos que se encuentren dentro de ese "name".
@@ -22,6 +22,6 @@
 ?>
 <?php
 
-header("Location: iniciars.php");
+header("Location: ../../iniciars.php");
 
 ?>

@@ -1,3 +1,10 @@
+<?php
+    include_once("db/conexion/conexion.php");
+?>
+
+<?php
+    include_once("conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,15 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/estilos2.css">
     <title>Index</title>
 </head>
+
 <body>
+
 <?php
-    session_start();
-    if ($_SESSION['nivel']==2 || $_SESSION['nivel']==3){
-    }
-    else {
-        header("Location: inicio.html");
-    }
-    ?>
+    include("db/usuarios/validardos.php");
+?>
+
 <div class="principal">
     <div class="logo">Logo</div>
     <div class="sobrante"> 
@@ -24,11 +29,11 @@
                     <li><a href="#">Buzón</a></li>
                     <li><a>Proyectos</a>
                         <ul>
-                            <li><a href="proyectos.php">Listado de proyectos</a></li>
+                        <li><a href="actividadeslider.php" disabled >Listado de proyectos</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Usuario</a></li>
-                    <li><a href="cerrarsesion.php">Salir</a></li>
+                    <li><a href="db/usuarios/cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
     </div>

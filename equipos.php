@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    include_once("conexion.php");
 
     $sql="SELECT * FROM usuario WHERE id_rol IS NULL"; //Se trae los datos de la tabla alumno
     $resultado=mysqli_query($conexion,$sql); //Se hace la variable que almacenará lo que traiga la selección anterior
@@ -16,6 +16,7 @@
     $sqla="SELECT * FROM proyecto";
     $resulta=mysqli_query($conexion,$sqla); 
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilos2.css">
     <title>Equipos</title>
 </head>
+
 <body>
 <div class="principal">
     <div class="logo">Logo</div>
@@ -46,13 +48,13 @@
                     </li>
                     <li><a href="#">Usuario</a></li>
                     <li><a href="#">Ayuda</a></li>
-                    <li><a href="cerrarsesion.php">Salir</a></li>
+                    <li><a href="db/usuarios/cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
     </div>
 </div>
     <div class="agregarequi">
-        <form action="agregarequipo.php" method="post" class="equipo">
+        <form action="db/acciones-maestro/agregarequipo.php" method="post" class="formulario">
             <fieldset>
                 <legend>Agregar nuevo equipo</legend>
 
@@ -61,7 +63,8 @@
                 <input type="text" name="nombrequipo" id="nombrequipo">
                 </div>
 
-                <div class="divs"><label for="nombreproyecto">Nombre del proyecto</label><br>
+                <div class="divs">
+                <label for="nombreproyecto">Nombre del proyecto</label><br>
                 <select name="nombreproyecto" id="nombreproyecto">
                 <option value ="">Seleccione...</option>
                 <?php WHILE ($rows = $resulta->fetch_assoc()){ ?><!-- Llama a la variable anterior, guardándola
@@ -79,7 +82,7 @@
                 </fieldset>
         </form>
 
-        <form action="formarequipos.php" method="post" class="equipo">
+        <form action="db/acciones-maestro/formarequipos.php" method="post" class="equipo">
             <fieldset>
             <legend>Agregar lider y miembros</legend>
 

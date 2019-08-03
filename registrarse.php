@@ -12,7 +12,7 @@
 <body>
     <div class="header">Soy un menu</div>
     <div class="regis regisp">
-        <form id="registrar" class="registrar" method="post" action="completo.php">
+        <form id="registrar" class="registrar" method="post" action="db/usuarios/completo.php">
     <label for="usuario" class="labels">Usuario</label>
     <input type="text" name="usuario" id="usuario" class="usuario"> <br>
 

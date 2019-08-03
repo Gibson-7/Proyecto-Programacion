@@ -1,5 +1,5 @@
 <?php
-include_once("conexion.php");
+include_once("../../conexion.php");
 
     $nombre = $_POST['nombredequipo']; //Recibe los valores escritos dentro del formulario
     $lequipo = $_POST['equipolid'];
@@ -10,7 +10,7 @@ include_once("conexion.php");
     $miembro5 = $_POST['miembro5'];
     $miembro6 = $_POST['miembro6'];
 
-    $ssql = "INSERT INTO lideres(id_equipo,id_usuario) VALUES ('$nombre','$lequipo')";  //Recibe la sentencia para hacer la inserción
+    $ssql = "UPDATE equipo SET id_lider = '$lequipo' WHERE id = '$nombre'";  //Recibe la sentencia para hacer la inserción
     $sql = "UPDATE usuario SET id_rol = 2 WHERE id = '$lequipo'";//Y este permitirá modificar al usuario, haciendolo líder
 
     if(!empty($miembro1) && !empty($nombre)){ //Esto permitirá ingresar a los miembros, validando que el 
@@ -63,5 +63,5 @@ include_once("conexion.php");
     $conexion->close(); //Cierra la conexión.
 ?>
 <?php
-header('location:equipos.php'); //Direcciona a la página que se menciona.
+header('location:../../equipos.php'); //Direcciona a la página que se menciona.
 ?>

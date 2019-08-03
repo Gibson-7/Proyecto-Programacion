@@ -1,5 +1,5 @@
 <?php
-    require_once("conexion.php");
+    include_once("conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-    include("validaruno.php");
+    include("db/usuarios/validaruno.php");
 ?>
 <div class="principal">
     <div class="logo">Logo</div>
@@ -34,7 +34,7 @@
                     </li>
                     <li><a href="#">Usuario</a></li>
                     <li><a href="#">Ayuda</a></li>
-                    <li><a href="cerrarsesion.php">Salir</a></li>
+                    <li><a href="db/usuarios/cerrarsesion.php">Salir</a></li>
                 </ul>
         </nav>
     </div>
