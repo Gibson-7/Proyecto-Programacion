@@ -64,9 +64,6 @@
 
             </fieldset>
         </form>
-
-        
-
     </div>
 
     <div class="listaproyectos">
