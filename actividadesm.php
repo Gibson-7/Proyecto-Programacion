@@ -6,7 +6,7 @@
     $id = $_SESSION['codigo'];
 
 
-    $sql = "SELECT * FROM vista3 WHERE miembros = $id"; 
+    $sql = "SELECT * FROM nom_act_pro_equ WHERE miembros = $id"; 
 
     $resultado = mysqli_query($conexion,$sql);
     $resultad = mysqli_query($conexion,$sql);

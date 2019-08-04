@@ -5,17 +5,17 @@
 
     $id = $_SESSION['codigo'];
 
-    $sql = "SELECT usuario,nombre,apellido_p,apellido_m FROM vista1 WHERE lider = $id";
+    $sql = "SELECT usuario,nombre,apellido_p,apellido_m FROM miembroslider WHERE lider = $id";
     $resultado = mysqli_query($conexion,$sql);
 
-    $ssql = "SELECT * FROM vista2 WHERE lider = $id";
+    $ssql = "SELECT * FROM actividadnombre WHERE lider = $id";
     $resulta = mysqli_query($conexion,$ssql);
     $ress = mysqli_query($conexion,$ssql);
 
     $sqli = "SELECT * FROM equipo WHERE id_lider = $id"; 
     $res = mysqli_query($conexion,$sqli);
 
-    $sq = "SELECT proyecto,pronombre FROM vista4 WHERE usuario = $id";
+    $sq = "SELECT proyecto,pronombre FROM proyectonombre WHERE usuario = $id";
     $resss = mysqli_query($conexion,$sq);
 
 
