@@ -9,8 +9,8 @@ include_once("../../conexion.php");
     $passa = $_POST['passalu'];
 
     $ssql = "INSERT INTO usuario(usuario,contrasenia,nombre,apellido_p,apellido_m,extras) VALUES ('$usra','$passa','$nomalu','$apepa','$apema','$matricula')";
-    
-    $resultado = mysqli_query($conexion,$ssql) or die (mysqli_error($conexion));
+    //Realiza la consulta.
+    $resultado = mysqli_query($conexion,$ssql);//Guarda la consulta realizada. 
     
     $conexion->close(); //Cierra la conexión.
 ?>

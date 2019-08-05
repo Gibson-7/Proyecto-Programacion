@@ -5,9 +5,9 @@ include_once("../../conexion.php");
     $usuario = $_POST['usuactividad'];//que recibirá son los datos que se encuentren dentro de ese "name".
     $fecha = $_POST['fechaacte'];
 
-    $sql = "INSERT INTO actividad_usuario(id_actividad,id_usuario,fecha_entrega) VALUES ('$actividad','$usuario','$fecha')"; 
+    $sql = "INSERT INTO actividad_usuario(id_actividad,id_usuario,estatus,fecha_entrega) VALUES ('$actividad','$usuario','Sin comenzar','$fecha')"; 
 
-    $resultado = mysqli_query($conexion,$sql) or die (mysqli_error($conexion));
+    $resultado = mysqli_query($conexion,$sql);//Guarda la consulta realizada. 
     
     $conexion->close(); //Cierra la conexión.
 ?>

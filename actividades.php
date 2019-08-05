@@ -4,8 +4,8 @@
     $sqlo = "SELECT * FROM proyecto ORDER BY nombre ASC";
     $resultado = $conexion->query($sqlo);
 
-    $sql="SELECT P.id AS codigo, P.nombre AS nombre_proyecto, A.nombre AS nombre_actividad, A.descripcion AS actividad_descripcion
-        FROM proyecto P INNER JOIN actividad A ON P.id = A.id_proyecto"; //Se trae los datos de la tabla alumno
+    $sql="SELECT P.id AS codigop, A.id as codigoa, P.nombre AS nombre_proyecto, A.nombre AS nombre_actividad, A.descripcion AS actividad_descripcion
+    FROM proyecto P INNER JOIN actividad A ON P.id = A.id_proyecto where A.id_proyecto = P.id"; //Se trae los datos de la tabla alumno
     $result = $conexion->query($sql); //
 ?>
 
@@ -90,16 +90,20 @@
                         <th>Nombre del proyecto</th>
                         <th>Nombre de la actividad</th>
                         <th>Descripción de la actividad</th>
+                        <th>Modificar</th>
                     </tr>
                         <?php
                         while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                         //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                         ?>
                     <tr>
-                        <td><?php echo $mostrar['codigo']?></td>
+                        <td><?php echo $mostrar['codigop']?></td>
                         <td><?php echo $mostrar['nombre_proyecto']?></td>
                         <td><?php echo $mostrar['nombre_actividad']?></td>
                         <td><?php echo $mostrar['actividad_descripcion']?></td>
+                        <td>
+                        <a href="db/acciones-maestro/modificaractividad.php?id=<?php echo $mostrar['codigoa']; ?>">Modificar</a>
+                        </td>
                     </tr>
                         <?php
                         }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.

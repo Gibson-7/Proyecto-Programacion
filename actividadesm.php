@@ -11,6 +11,12 @@
     $resultado = mysqli_query($conexion,$sql);
     $resultad = mysqli_query($conexion,$sql);
     $resulta = mysqli_query($conexion,$sql);
+
+    $sqli="SELECT * FROM actividad_usuario WHERE id_usuario = $id"; 
+    $result=mysqli_query($conexion,$sqli);
+
+    $sacarco = "SELECT * FROM act_arc_com WHERE usuario = $id";
+    $resu = mysqli_query($conexion,$sacarco);
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +51,7 @@
 </div>
 
 <div class="agregara">
-    <form action="db/acciones-miembro/guardaractividad.php" method="post" class="formulario" enctype="multipart/form-data">
+    <form action="db/upload/guardararchivos.php" method="post" class="formulario" enctype="multipart/form-data">
         <fieldset>
             <legend>Agregar actividad</legend>
 
@@ -81,18 +87,18 @@
                     <option value="<?php echo $rows['idproyecto']; ?>"><?php echo $rows['nombrepro']; ?>
                     </option>
                     <?php } ?> 
-                    </select><br><br>
+                    </select><br>
 
-                    <label for="archivo">Archivo</label><br>
-                    <input type="file" id="archivo" name="archivo">
+                    <label for="comentariosm">Comentarios</label><br>
+                    <textarea name="comentariosm" id="comentariosm" class ="comentariosm"></textarea><br>
 
                 </div>
 
                 <div class="divs">
 
-                    <label for="comentariosm">Comentarios</label><br>
-                    <textarea name="comentariosm" id="comentariosm" class ="comentariosm"></textarea><br>
-
+                    <label for="tarchivo">Archivo</label><br>
+                    <input type="file" id="archivo" name="archivo">
+                    <br><br><br>
                     <input type="submit" class="agregar" id="agregarporm" value="Agregar">
 
                 </div>
@@ -100,6 +106,33 @@
         </fieldset>
     </form>
 </div>
+
+<div class="listalumnos">
+        <h1>Progreso de mis actividades</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Estatus</th>
+                    <th>Archivo</th>
+                    <th>Comentario</th>
+                </tr>
+                    <?php
+                    while ($mostrar=mysqli_fetch_array($resu)){ //Va a permitir regresar los datos correspondientes de la tabla,
+                    //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
+                    ?>
+                <tr>
+                    <td><?php echo $mostrar['nombrea']?></td>
+                    <td><?php echo $mostrar['estatus']?></td>
+                    <td><a href="db/upload/<?php echo $mostrar['archivo']?>" download="<?php echo $mostrar['archivo']?>"><?php echo $mostrar['archivo']?></a></td>
+                    <td><?php echo $mostrar['comentario']?></td>
+                </tr>
+                <?php
+                }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
+                ?>
+            </thead>
+        </table>
+    </div>
 
 <div class="footer">
     <p> - 2019</p>

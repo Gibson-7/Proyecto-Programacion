@@ -1,5 +1,5 @@
 <?php
-    include_once("db/conexion/conexion.php");
+    include_once("conexion.php");
 ?>
 
 <?php
@@ -16,10 +16,6 @@
 </head>
 
 <body>
-
-<?php
-    include("db/usuarios/validardos.php");
-?>
 
 <div class="principal">
     <div class="logo">Logo</div>

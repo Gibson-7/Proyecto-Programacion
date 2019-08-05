@@ -1,5 +1,8 @@
 <?php
     include_once("conexion.php");
+
+    $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
+    $result=mysqli_query($conexion,$sql); //
 ?>
 
 <!DOCTYPE html>
@@ -74,11 +77,9 @@
                     <th>Código</th>
                     <th>Nombre del proyecto</th>
                     <th>Descripción</th>
-                    <th>Modificar</th>
+                    <th>Acciones</th>
                 </tr>
                 <?php
-                $sql="SELECT id,nombre,descripcion FROM proyecto"; //Se trae los datos de la tabla alumno
-                $result=mysqli_query($conexion,$sql); //
                 while ($mostrar=mysqli_fetch_array($result)){ //Va a permitir regresar los datos correspondientes de la tabla,
                     //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
                     ?>
@@ -87,7 +88,7 @@
                     <td><?php echo $mostrar['nombre']?></td>
                     <td><?php echo $mostrar['descripcion']?></td>
                     <td>
-                    <a href="">Modificar</a>
+                    <a href="db/acciones-maestro/modificarproyecto.php?id=<?php echo $mostrar['id']; ?>">Modificar</a>
                     </td>
                 </tr>
                 <?php

@@ -14,9 +14,13 @@
 
     $sqli = "SELECT * FROM equipo WHERE id_lider = $id"; 
     $res = mysqli_query($conexion,$sqli);
+    $r = mysqli_query($conexion,$sqli);
 
     $sq = "SELECT proyecto,pronombre FROM proyectonombre WHERE usuario = $id";
     $resss = mysqli_query($conexion,$sq);
+
+    $sacarco = "SELECT * FROM act_arc_com WHERE lider = $id";
+    $resu = mysqli_query($conexion,$sacarco);
 
 
 ?>
@@ -50,7 +54,7 @@
     </div>
 </div>
 
-<div class="agregara">
+<div class="formulariosli">
 
     <form action="db/acciones-lider/actporlider.php" method="post" class="formulario">
         <fieldset>
@@ -90,7 +94,7 @@
 
     <form action="db/acciones-lider/comentarioslider.php" method="post" class="formulario">
         <fieldset>
-            <legend>Agregar comentario</legend>
+            <legend>Agregar comentario y estatus</legend>
 
                 <div class="divs">
 
@@ -130,7 +134,17 @@
                 </div>
 
                 <div class="divs">
-                    <br><br>
+
+                    <label for="estatus">Estatus</label><br>
+                    <select name="estatus" id="estatus">
+                    <option value ="" disabled = "disabled">Seleccione...</option>
+                    <option value ="Sin comenzar">Sin comenzar</option>
+                    <option value ="En proceso">En proceso</option>
+                    <option value ="Finalizado">Finalizado</option>
+                    </select><br>
+
+
+                    <br>
                     <input type="submit" class="agregar" id="agregarlidcom" value="Agregar">
                 </div>
 
@@ -138,7 +152,58 @@
 
     </form>
 
+    <form action="db/upload/guardarfinal.php" method="post" class="formulario" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Agregar actividad final</legend>
+                <div class="divs">
+                    <label for="tarchivo">Archivo</label><br>
+                    <input type="file" id="archivofinal" name="archivo">
+                </div>
+                <div class="divs">
+                    <label for="equiponomb">Nombre del equipo</label><br>
+                    <select name="equiponomb" id="equiponomb">
+                    <option value ="">Seleccione...</option>
+                    <?php WHILE ($rows = $r->fetch_assoc()){ ?>
+                    <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre']; ?>
+                    </option>
+                    <?php } ?> 
+                    </select>
+                </div>
+                <div class="divs">
+                    <input type="submit" class="agregar" id="agregarfinal" value="Agregar">
+                </div>
+        </fieldset>
+    </form>
+
+
 </div>
+
+<div class="listaprogreso">
+        <h1>Progreso del proyecto</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Estatus</th>
+                    <th>Archivo</th>
+                    <th>Comentario</th>
+                </tr>
+                    <?php
+                    while ($mostrar=mysqli_fetch_array($resu)){ //Va a permitir regresar los datos correspondientes de la tabla,
+                    //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
+                    ?>
+                <tr>
+                    <td><?php echo $mostrar['nombrea']?></td>
+                    <td><?php echo $mostrar['estatus']?></td>
+                    <td><a href="db/upload/<?php echo $mostrar['archivo']?>" download="<?php echo $mostrar['archivo']?>"><?php echo $mostrar['archivo']?></a></td>
+                    <td><?php echo $mostrar['comentario']?></td>
+                </tr>
+                <?php
+                }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
+                ?>
+            </thead>
+        </table>
+    </div>
 
 <div class="footer">
     <p> - 2019</p>

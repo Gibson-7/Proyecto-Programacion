@@ -10,14 +10,17 @@
     $miembro5=mysqli_query($conexion,$sql); //
     $miembro6=mysqli_query($conexion,$sql); //
 
-    $sqlo="SELECT * FROM equipo";
+    $sqlo="SELECT * FROM equipo WHERE id_lider IS NULL";
     $result=mysqli_query($conexion,$sqlo); 
+
+    $sqo="SELECT * FROM equipo WHERE calificacion IS NULL";
+    $resul=mysqli_query($conexion,$sqo); 
 
     $sqla="SELECT * FROM proyecto";
     $resulta=mysqli_query($conexion,$sqla); 
 
-    $slq="SELECT * FROM vista5";
-    $rees=mysqli_query($conexion,$slq);
+    $sqlo="SELECT * FROM nomlidequ";
+    $resu=mysqli_query($conexion,$sqlo); 
 ?>
 
 <!DOCTYPE html>
@@ -70,10 +73,8 @@
                 <label for="nombreproyecto">Nombre del proyecto</label><br>
                 <select name="nombreproyecto" id="nombreproyecto">
                 <option value ="">Seleccione...</option>
-                <?php WHILE ($rows = $resulta->fetch_assoc()){ ?><!-- Llama a la variable anterior, guardándola
-                dentro de otra variable llamada rows, la cual permite hacer la busqueda mediante las filas-->
-                <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre']; ?><!-- Se ingresan dentro
-                 del option para que aparezcan como las opciones a escogrer.-->
+                <?php WHILE ($rows = $resulta->fetch_assoc()){ ?>
+                <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre']; ?>
                 </option>
                 <?php } ?> 
                 </select>
@@ -85,7 +86,7 @@
                 </fieldset>
         </form>
 
-        <form action="db/acciones-maestro/formarequipos.php" method="post" class="equipo">
+        <form action="db/acciones-maestro/formarequipos.php" method="post" class="formulario">
             <fieldset>
             <legend>Agregar lider y miembros</legend>
 
@@ -171,9 +172,72 @@
             </fieldset>
         </form>
 
+    <form action="db/acciones-maestro/calificacion.php" method="post" class="formulario"">
+        <fieldset>
+            <legend>Añadir calificación</legend>
+                <div class="divs">
+                    <label for="calificacion">Calificación</label><br>
+                    <input type="text" name="calificacion" id="calificacion">
+                </div>
+                <div class="divs">
+                    <label for="equinom">Nombre del equipo</label><br>
+                    <select name="equinom" id="equinom">
+                    <option value ="">Seleccione...</option>
+                    <?php WHILE ($rows = $resul->fetch_assoc()){ ?>
+                    <option value="<?php echo $rows['id']; ?>"><?php echo $rows['nombre']; ?>
+                    </option>
+                    <?php } ?> 
+                    </select>
+                </div>
+                <div class="divs">
+                    <input type="submit" class="agregar" id="calificacion" value="Agregar">
+                </div>
+        </fieldset>
+    </form>
     </div>
+
+    <div class="listaequipo">
+        <h1>Listado de equipos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código del equipo</th>
+                        <th>Nombre del equipo</th>
+                        <th>Nombre del proyecto</th>
+                        <th>Nombre del líder</th>
+                        <th>Apellido paterno</th>
+                        <th>Apellido materno</th>
+                        <th>Actividad final</th>
+                        <th>Calificación</th>
+                        <th>Acciones</th>
+                    </tr>
+                        <?php
+                        while ($mostrar=mysqli_fetch_array($resu)){ //Va a permitir regresar los datos correspondientes de la tabla,
+                        //los cuales serán mostrados dentro de los echo, que se encuentran dentro de cada <td>.
+                        ?>
+                    <tr>
+                        <td><?php echo $mostrar['codigo']?></td>
+                        <td><?php echo $mostrar['nombreequipo']?></td>
+                        <td><?php echo $mostrar['nombreproyecto']?></td>
+                        <td><?php echo $mostrar['nombre']?></td>
+                        <td><?php echo $mostrar['apellidopat']?></td>
+                        <td><?php echo $mostrar['apellidomat']?></td>
+                        <td><a href="db/upload/<?php echo $mostrar['actividadfinal']?>" download="<?php echo $mostrar['actividadfinal']?>"><?php echo $mostrar['actividadfinal']?></a></td>
+                        <td><?php echo $mostrar['calificacion']?></td>
+                        <td>
+                        <a href="db/acciones-maestro/modificarequipo.php?id=<?php echo $mostrar['codigo']; ?>">Modificar</a>
+                        </td>
+                    </tr>
+                        <?php
+                        }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
+                        ?>
+                </thead>
+            </table>
+    </div>
+
     <div class="footer">
         <p> - 2019</p>
     </div>
+
 </body>
 </html>

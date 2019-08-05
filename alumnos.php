@@ -98,9 +98,6 @@
                     <td><?php echo $mostrar['apellido_p']?></td>
                     <td><?php echo $mostrar['apellido_m']?></td>
                     <td><?php echo $mostrar['extras']?></td>
-                    <td>
-                        <a href="db/acciones-maestro/eliminaralumno.php?id=<?php echo $mostrar['id']?>">Eliminar</a>
-                    </td>
                 </tr>
                 <?php
                 }//Se cierra el while aquí, para así poder generar cada tupla que exista dentro de la tabla.
